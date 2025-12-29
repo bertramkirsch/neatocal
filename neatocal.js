@@ -148,10 +148,8 @@ function neatocal_hallon_almanackan() {
     ui_tr_mo.appendChild( H.th( NEATOCAL_PARAM.month_code[ i_mo%12 ] ) );
   }
 
-  let week_count = 1;
   let week_parity = 0;
   let day_parity = {};
-  let day_week_no = {};
   for (let i_mo = start_mo; i_mo < (start_mo+n_mo); i_mo++) {
 
     let cur_year = parseInt(year) + Math.floor(i_mo/12);
@@ -160,23 +158,19 @@ function neatocal_hallon_almanackan() {
 
     if (!(i_mo in day_parity)) {
       day_parity[i_mo] = {};
-      day_week_no[i_mo] = {};
     }
 
     for (let day_idx=0; day_idx < 31; day_idx++) {
       if (day_idx >= nday_in_mo) { break; }
 
       day_parity[i_mo][day_idx] = week_parity;
-      day_week_no[i_mo][day_idx] = week_count;
 
       let dt = new Date(cur_year, cur_mo, day_idx+1);
       if (dt.getDay() == 0) {
         week_parity = 1-week_parity;
-        week_count++;
       }
 
     }
-
   }
 
   let tbody = document.getElementById("ui_tbody");
@@ -233,7 +227,7 @@ function neatocal_hallon_almanackan() {
         td.appendChild( span_date );
         td.appendChild( span_day );
 
-        if ((dt.getDay() == 1) && NEATOCAL_PARAM.show_week_numbers) {
+        if (dt.getDay() == 1 && NEATOCAL_PARAM.show_week_numbers) {
           let span_week_no = H.span(getISOWeekNumber(dt), "date");
           span_week_no.style.float = "right";
           span_week_no.style.color = "rgb(230,37,7)";
