@@ -121,7 +121,7 @@ var NEATOCAL_PARAM = {
   //
   // show week numbers
   //
-  "show_week_numbers": false,
+  "show_week_numbers": true,
 
   // fiddly parameters
   //

@@ -9,4 +9,4 @@ then
 fi
 
 # Start a simple HTTP server using five-server
-five-server --port=8091 --open='index.html?data=example/2026_Saxony.json&show_week_numbers=true' --root=./
+five-server --port=8091 --open='index.html?data=example/2026_Saxony.json' --root=./

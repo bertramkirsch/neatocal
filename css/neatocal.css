@@ -70,7 +70,7 @@ table {
 td, th {
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 0.02ch;
+  letter-spacing: 0.03ch;
   border-bottom: 0.05vmin solid #000;
   padding: .3vmin .3vmin;
   font-size: .7vmin;
@@ -80,7 +80,7 @@ td, th {
 th {
   font-size: 0.8vmin;
   font-weight: 400;
-  letter-spacing: 0.18ch;
+  letter-spacing: 0.22ch;
   /* font-size: var(--month-font-size); */
   padding: 0;
 }
@@ -100,6 +100,10 @@ td:empty {
   width: 1.5em;
 }
 
+.week-number {
+  margin-left: 0.3vmin;
+}
+
 .week-number,
 .holiday {
   font-size: .6vmin;
@@ -111,8 +115,6 @@ td:empty {
 
 .weekend {
   /* background: #d8d8d8; */
-  background: #eee;
-  font-weight: 400;
 }
 
 p {
