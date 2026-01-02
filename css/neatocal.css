@@ -25,7 +25,11 @@ SOFTWARE.
 */
 
 :root {
-  --header-height: 4vmin;
+  --header-height: 5vmin;
+  --inset-top: 3vmin;
+  --inset-right: 1vmin;
+  --inset-bottom: 8vmin;
+  --inset-left: 1vmin;
 }
 
 @media print {
@@ -48,11 +52,13 @@ html, body {
 }
 
 #ui_year {
+  margin-top: var(--inset-top);
   height: var(--header-height);
 }
+
 #ui_year > span {
   font-size: 3vmin;
-  font-weight: 800;
+  font-weight: 400;
 }
 
 #ui_tr_month_name > th {
@@ -61,10 +67,11 @@ html, body {
 
 
 table {
-  width: 100%;
-  height: calc(100% - var(--header-height));
+  width: calc(100% - var(--inset-left) - var(--inset-right));
+  height: calc(100% - var(--inset-top) - var(--inset-bottom) - var(--header-height));
+  margin-left: var(--inset-left);
   border-collapse: separate;
-  border-spacing: .5em 0;
+  border-spacing: 0.5vmin 0;
 }
 
 td, th {
