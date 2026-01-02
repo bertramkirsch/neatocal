@@ -6,7 +6,7 @@
     "weekday_code": [ "So", "Mo", "Di", "Mi", "Do", "Fr", "Sa" ],
     "month_code": [ "Januar", "Februar", "März",
                     "April", "Mai", "Juni",
-                    "Juli", "August", "Sep",
+                    "Juli", "August", "September",
                     "Oktober", "November", "Dezember" ],
     "highlight_color": "#f0f4ff",
     "weekday_foreground_color": "rgba(0, 0, 0, 0.6)",

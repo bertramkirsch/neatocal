@@ -522,9 +522,9 @@ function neatocal_hallon_almanackan() {
         td.appendChild( span_day );
 
         if ((dt.getDay() == 1) && NEATOCAL_PARAM.show_week_numbers) {
-          let span_week_no = H.span(getISOWeekNumber(dt), "date");
+          let span_week_no = H.span(getISOWeekNumber(dt), "week-number");
           span_week_no.style.float = "right";
-          span_week_no.style.color = "rgb(230,37,7)";
+          //span_week_no.style.color = "rgb(230,37,7)";
           week_styles(span_week_no);
           td.appendChild(span_week_no);
         }
@@ -627,9 +627,9 @@ function neatocal_default() {
         td.appendChild( span_day );
 
         if ((dt.getDay() == 1) && NEATOCAL_PARAM.show_week_numbers) {
-          let span_week_no = H.span(getISOWeekNumber(dt), "date");
-          span_week_no.style.float = "right";
-          span_week_no.style.color = "rgb(230,37,7)";
+          let span_week_no = H.span(getISOWeekNumber(dt), "week-number");
+          //span_week_no.style.float = "right";
+          //span_week_no.style.color = "rgb(230,37,7)";
           week_styles(span_week_no);
           td.appendChild(span_week_no);
         }
